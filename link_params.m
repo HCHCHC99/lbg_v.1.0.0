@@ -22,8 +22,8 @@ fprintf('模型已加载: %s\n\n', model_name);
 %% ========== 1. 改 omega_e Constant ==========
 fprintf('---------- 改 omega_e Constant ----------\n');
 try
-    set_param([model_name '/omega_e'], 'Value', 'sim.omega_e');
-    fprintf('omega_e = sim.omega_e\n');
+    set_param([model_name '/omega_e'], 'Value', 'simCfg.omega_e');
+    fprintf('omega_e = simCfg.omega_e\n');
 catch ME
     fprintf('失败: %s\n', ME.message);
 end
@@ -43,14 +43,14 @@ end
 %% ========== 3. 改求解器 ==========
 fprintf('\n---------- 改求解器 ----------\n');
 try
-    set_param(model_name, 'FixedStep', 'sim.Ts');
-    fprintf('FixedStep = sim.Ts\n');
+    set_param(model_name, 'FixedStep', 'simCfg.Ts');
+    fprintf('FixedStep = simCfg.Ts\n');
 catch ME
     fprintf('FixedStep 失败: %s\n', ME.message);
 end
 try
-    set_param(model_name, 'StopTime', 'sim.StopTime');
-    fprintf('StopTime = sim.StopTime\n');
+    set_param(model_name, 'StopTime', 'simCfg.StopTime');
+    fprintf('StopTime = simCfg.StopTime\n');
 catch ME
     fprintf('StopTime 失败: %s\n', ME.message);
 end

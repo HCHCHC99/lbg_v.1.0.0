@@ -61,14 +61,14 @@ fprintf('  ki       = %.4e\n', pll.ki);
 fprintf('\n');
 
 %% ========== 仿真参数 ==========
-sim.Ts         = 50e-6;           % 仿真步长 (s)
-sim.StopTime   = 0.03;            % 仿真停止时间 (s)
-sim.omega_e    = 8168.1409;       % 电角速度输入 (rad/s)，对应 7800 rpm
+simCfg.Ts       = 50e-6;          % 仿真步长 (s)
+simCfg.StopTime = 0.03;           % 仿真停止时间 (s)
+simCfg.omega_e  = 8168.1409;      % 电角速度输入 (rad/s)，对应 7800 rpm
 
 fprintf('仿真参数:\n');
-fprintf('  Ts       = %.1e s\n', sim.Ts);
-fprintf('  StopTime = %.2f s\n', sim.StopTime);
-fprintf('  omega_e  = %.4f rad/s\n', sim.omega_e);
+fprintf('  Ts       = %.1e s\n', simCfg.Ts);
+fprintf('  StopTime = %.2f s\n', simCfg.StopTime);
+fprintf('  omega_e  = %.4f rad/s\n', simCfg.omega_e);
 fprintf('\n');
 
 %% ========== 派生参数（用于验证） ==========

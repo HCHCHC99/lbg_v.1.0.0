@@ -3,7 +3,7 @@
 % 转速范围: 1000 ~ 7800 rpm, 步长约 2000 rpm
 % 不改 pll_step，只改 omega_e 的值
 
-clear; clc;
+ clc;
 
 %% 打开模型
 model_path = 'F:\SIMULINK\Luenberger_BLDC\scripts\test2\lbg.slx';
